@@ -168,14 +168,11 @@ span b {
 /*Has the white pill background*/
 .box1 .span1 b {
     transform: rotate(180deg);
-    width: 60%;
+    
     height: 50px;
-    top: 90px;
-    left: 15px;
-    box-shadow: inset 0 0 5px #000;
-    background-color: white;
-    line-height: 45px;
-    border-radius: 20%
+    top: 100px;
+    left: 90px;
+    
 }
 .box1 .span3 b {
     transform: rotate(90deg);
