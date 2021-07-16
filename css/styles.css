@@ -19,13 +19,21 @@ form .container ul {
 
 }
 
+h4 {
+    border-top: 4px solid black
+    ; border-left: 4px solid black;
+     border-right: 4px solid black;
+}
 #inputwheel {
     background-color:white;
     box-shadow: 0 0 15px #3ded97;
     border-radius: 15px;
-    padding: 40px 40px 40px 0px;
+    padding: 10px 40px 40px 0px;
 }
 
+tbody {
+    font-size: 1.2rem;
+}
 
 .nav-item a {
     color:#3ded9a;

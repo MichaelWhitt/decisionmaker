@@ -41,27 +41,52 @@
         <div class="row">
             <!--Input Form-->
             <div class="col-sm-6">
-                <div style="text-align: center; font-size: 2rem;">insert options here</div>
+                
                 <form id="form1" name="form1" action="/action_page.php">
-                    <div class="container text-center">
+                    <table class="table" style="border: 4px solid black;">
+                        <div class="container text-center">
+                            <h4>Instructions</h4>
+                        </div>
+                        
+                        <tbody>
+                            <tr>
+                                <th scope="row">Step 1:</th>
+                                <td>Type in the options below</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Step 2:</th>
+                                <td>Click "Update Wheel"</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Step 3:</th>
+                                <td>Click "Spin" in the Center of the Wheel</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <div class="container text-center d-flex">
                     <ul>
                         <li class="list-unstyled col-form-label">
                             <input type="text" id="input1" name="input1" placeholder="Input Option 1" class="form-control form-group">
                             <input type="text" id="input2" name="input2" placeholder="Input Option 2" class="form-control form-group">
                             <input type="text" id="input3" name="input3" placeholder="Input Option 3" class="form-control form-group">
                             <input type="text" id="input4" name="input4" placeholder="Input Option 4" class="form-control form-group">
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="list-unstyled col-form-label ml-1">
                             <input type="text" id="input5" name="input5" placeholder="Input Option 5" class="form-control form-group">
                             <input type="text" id="input6" name="input6" placeholder="Input Option 6" class="form-control form-group">
                             <input type="text" id="input7" name="input7" placeholder="Input Option 7" class="form-control form-group">
                             <input type="text" id="input8" name="input8" placeholder="Input Option 8" class="form-control form-group">
-                            
+
                         </li>
                     </ul>
                 </div>
 
                 </form>
                 <div class="container text-center">
-                    <button onclick="changeInput()" class="btn btn-danger">Try me</button>
+                    <button onclick="changeInput()" class="btn btn-danger">Update Wheel</button>
                 </div>
             </div>
             <!--Wheel-->
