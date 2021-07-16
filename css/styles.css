@@ -19,16 +19,18 @@ form .container ul {
 
 }
 
-h4 {
-    border-top: 4px solid black
-    ; border-left: 4px solid black;
-     border-right: 4px solid black;
+.table  {
+    border: 4px solid black;
 }
+
 #inputwheel {
     background-color:white;
     box-shadow: 0 0 15px #3ded97;
     border-radius: 15px;
-    padding: 10px 40px 40px 0px;
+    padding: 10px 10px 0px 10px;
+    width: 90%
+    
+    
 }
 
 tbody {
@@ -211,3 +213,17 @@ span b {
     top: 90px;
     left: 90px;
 }
+
+/*Breakpoints*/
+
+
+
+@media (max-width: 576px) { 
+    th, td { font-size: .9rem} 
+}
+
+/*@media (max-width: 1252px) { 
+    #mainbox {width: 55%;}
+}*/
+
+
