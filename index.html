@@ -37,7 +37,7 @@
     </div>
 
     
-    <div class="container-fluid" id="inputwheel">
+    <div class="container" id="inputwheel">
         <div class="row">
             <!--Input Form-->
             <div class="col-lg-6 pb-5 pt-2">
@@ -67,18 +67,18 @@
                     <div class="container text-center d-flex">
                     <ul>
                         <li class="list-unstyled col-form-label">
-                            <input type="text" id="input1" name="input1" placeholder="Input Option 1" class="form-control form-group">
-                            <input type="text" id="input2" name="input2" placeholder="Input Option 2" class="form-control form-group">
-                            <input type="text" id="input3" name="input3" placeholder="Input Option 3" class="form-control form-group">
-                            <input type="text" id="input4" name="input4" placeholder="Input Option 4" class="form-control form-group">
+                            <input type="text" id="input1" name="input1" placeholder="Input Option 1" class="form-control form-group" required>
+                            <input type="text" id="input2" name="input2" placeholder="Input Option 2" class="form-control form-group" required>
+                            <input type="text" id="input3" name="input3" placeholder="Input Option 3" class="form-control form-group" required>
+                            <input type="text" id="input4" name="input4" placeholder="Input Option 4" class="form-control form-group" required>
                         </li>
                     </ul>
-                    <ul>
+                    <ul id="hidemd">
                         <li class="list-unstyled col-form-label ml-1">
-                            <input type="text" id="input5" name="input5" placeholder="Input Option 5" class="form-control form-group">
-                            <input type="text" id="input6" name="input6" placeholder="Input Option 6" class="form-control form-group">
-                            <input type="text" id="input7" name="input7" placeholder="Input Option 7" class="form-control form-group">
-                            <input type="text" id="input8" name="input8" placeholder="Input Option 8" class="form-control form-group">
+                            <input type="text" id="input5" name="input5" placeholder="Input Option 5" class="form-control form-group" required>
+                            <input type="text" id="input6" name="input6" placeholder="Input Option 6" class="form-control form-group" required>
+                            <input type="text" id="input7" name="input7" placeholder="Input Option 7" class="form-control form-group" required>
+                            <input type="text" id="input8" name="input8" placeholder="Input Option 8" class="form-control form-group" required>
 
                         </li>
                     </ul>
@@ -107,7 +107,7 @@
                         </div>
                     </div>
 
-                    <button id="spin" onclick="myfunction()">SPIN</button>
+                    <button id="spin" onclick="myfunction()">GO</button>
                 </div>
             </div>
         </div>
@@ -115,6 +115,7 @@
                 
     
 <script>
+
 function myfunction(){
 
     var x = 1024; //min value
@@ -136,35 +137,16 @@ function myfunction(){
 
 /*Changes span to some new text - make JS for input here*/
 function changeInput(){
-    /*let x = document.getElementById("input1").value;
-    document.getElementById("span2b").innerHTML = x;*/
+    
     for (let i= 1; i<9; i++){
         let x = document.getElementById("input"+i).value;
         document.getElementById("spanb"+i).innerHTML = x;
     }
+    
 }
 
 
 </script>
-
-<!-- delete me
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4" style="background-color: brown;">
-            <span>hello</span>
-        </div>
-        <div class="col-sm-4" style="background-color: yellow;">
-            <span>hello</span>
-        </div>
-        <div class="col-sm-4" style="background-color: pink;">
-            <span>hello</span>
-        </div>
-        
-    </div>
-
-</div>
--->
-
 
 <!-- Jquery-->
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
