@@ -246,7 +246,7 @@ span b {
 /*Breakpoints*/
 @media (max-width: 576px) { 
     th, td { font-size: .9rem} 
-    #s2anchor {display:none}
+    /*#s2anchor {display:none}*/
     #inputwheel {border: none; margin: 0;}
     #li1 {columns: 2;}
 }
