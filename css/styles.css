@@ -6,7 +6,6 @@ body {
     font-family: 'Permanent Marker', cursive;
 }
 
-
 section {
     height: 100vh;
     width: 100%;
@@ -72,7 +71,6 @@ tbody {
     
     border-left: 1px solid #ff00ff;
     padding-left: 10px;
-    
 }
 
  /* ----------------- wheel ------------------- */
@@ -241,6 +239,10 @@ span b {
     transform: rotate(-90deg);
     top: 90px;
     left: 90px;
+}
+
+input[type="text"]{
+    text-align: center;
 }
 
 /*Breakpoints*/
