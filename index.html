@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>What Cuisine?</title>
     <meta charset="utf-8"/>    
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
@@ -18,25 +19,39 @@
 
 
 <body>
+     
     <!--Navigation Menu-->
+    <section id="section1">
+        
     <div class="container" > 
         <div class="row text-center text-sm-left ">
             <div class="col" >
-                <a class="navbar-brand" href="index.html">Random { Decision }</a>
+                <a class="navbar-brand" href="index.html">What { Cuisine }</a>
             </div>
         </div>
         <div class="row text-center text-sm-left">
             <div class="col">
+                
                 <ul class="nav navbar-nav">
+                    <li style="color:white;">Helping you decide what to { eat }</li>
                     <li class="nav-item active"><a href="index.html">Home</a></li>
                     <li class="nav-item"><a href="profile.html">Profile</a></li>
                     <li class="nav-item"><a href="leaderboard.html">Leaderboard</a></li>
                 </ul>
             </div>
-        </div>    
+        </div>  
+            <video autoplay muted loop id="myVideo">
+                <source src="https://michaeldwhitt.com/wp-content/uploads/2021/07/Shots-of-Different-Food.mp4" type="video/mp4">
+          </video>
     </div>
-
+    <div class="container text-center" id="homebutton">
+        <a href="#section2"> <button class="btn btn-lg btn-primary">Help Me Decide!</button>  </a>
+    </div>
     
+        
+    </section> 
+
+    <section id="section2">
     <div class="container" id="inputwheel">
         <div class="row">
             <!--Input Form-->
@@ -111,7 +126,9 @@
                 </div>
             </div>
         </div>
-</div>     
+    </div>  
+</section>
+ 
                 
     
 <script>
