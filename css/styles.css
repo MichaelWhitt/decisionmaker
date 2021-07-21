@@ -11,6 +11,9 @@ section {
     width: 100%;
 }
 
+#section2 {
+    padding: 25px;
+}
 #s2anchor {
     opacity: 0;
 }
