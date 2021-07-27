@@ -31,17 +31,63 @@ function addSpin(){
 document.querySelector('video').playbackRate = .75;*/
 
 /*Changes span to some new text - make JS for input here*/
-/* Old Code for wheel inputs
-function changeInput(){
-    
-    for (let i= 1; i<9; i++){
-        let x = document.getElementById("input"+i).value;
-        document.getElementById("spanb"+i).innerHTML = x;
-    }
-    
-}*/
+//Old Code for wheel inputs
 
-/*New Code to generate wheel on update wheel click*/
+
+
+function changeInput(){
+    let countArray = [];
+    for (let i= 1; i<9; i++){
+        let x = document.getElementById("input"+i).value.trim();
+        if (x !== "") { 
+            countArray.push(x); 
+        }
+        //document.getElementById("spanb"+i).innerHTML = x;
+    } 
+
+    if (countArray.length < 2) {
+        //add an alert for anything under 2 error
+        alert("Need more than 1 input value.");
+    } else {
+        generateWheel(countArray); //hoisted function
+    }
+}
+
+
+
+function generateWheel(array) {
+    let s = document.getElementById("wheel");
+    // reset container
+    s.innerHTML = "";
+    let d1 = document.createElement("div");
+    let d2 = document.createElement("div");
+    let d3 = document.createElement("div");
+    let d4 = document.createElement("div");
+    d1.id = "d1";
+    d1.className = "d1";
+    d2.id = "d2";
+    d2.className = "d2";
+    d3.id = "d3";
+    d3.className = "d3";
+    d4.id = "d4";
+    d4.className = "d4";
+
+    s.appendChild(d1);
+    d1.appendChild(d2);
+    d2.appendChild(d3);
+    d3.appendChild(d4);
+    for (let i = 0; i <= array.length -1; i++) {
+      let span = document.createElement("span");
+      let boldText = document.createElement("b");
+      boldText.id = "spanb" + (i + 1);
+      boldText.textContent = array[i];
+      span.classList.add("span" + (i + 1) + "w" + array.length);
+      span.appendChild(boldText);
+      d4.appendChild(span);
+
+}
+
+/*New Code to generate wheel on update wheel click
 function changeInput(){
     
     let totalNumInputs = 0;
@@ -54,7 +100,7 @@ function changeInput(){
         generateWheel(totalNumInputs);
     }
 
-    /*Generate Wheel Function*/
+    //Generate Wheel Function
     function generateWheel(num) {
         let s = document.getElementById("wheel");
         // reset container
@@ -63,7 +109,6 @@ function changeInput(){
         let d2 = document.createElement("div");
         let d3 = document.createElement("div");
         let d4 = document.createElement("div");
-        let spanb = document.createElement("b");
         d1.id = "d1";
         d1.className = "d1";
         d2.id = "d2";
@@ -79,14 +124,15 @@ function changeInput(){
           d3.appendChild(d4);
         for (let i = 1; i <= num; i++) {
           let span = document.createElement("span");
+          let spanb = document.createElement("b");
           span.classList.add("span"+i+"w"+num);
           d4.appendChild(span);
-          b.classList.add("spanb"+i);
-          span.appendChild();
+          //b.classList.add("spanb"+i);
+          //span.appendChild();
         }
     } 
 
-    /*Code to generate wheels depending on chosen inputs*/
+    //Code to generate wheels depending on chosen inputs
     let wheelNum = totalNumInputs;
     switch(wheelNum) {
         case 2:
@@ -111,6 +157,6 @@ function changeInput(){
             generateWheel(8);
         //default:
       }
-    
 }
-
+*/
+}
