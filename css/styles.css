@@ -356,4 +356,359 @@ input[type="text"]{
 }
  }
 
+/*NEW CSS FOR WHEELS*/
+body {
+    margin: 0; padding: 0;
+}
+/*Section 1*/
+#s1 {
+    text-align: center; 
+    height: 100vh;
+    background: pink;
+}
 
+/*Section 2*/
+#s2 
+{
+    text-align: center; 
+    height: 100vh;
+    background: orange;
+}
+
+/*Wheel container's container div*/
+#d1 {
+ padding-top: 10%;
+}
+
+/*Wheel container div*/
+#d2 {
+    margin: auto;
+    position: relative;
+    width:500px;
+    height:500px;
+}
+
+#d2.animate::after {
+    animation-name: animateArrow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    position: absolute;
+}
+
+@keyframes animateArrow {
+    0% {right: -50px;}
+    50% {right: -60px;}
+}
+
+#d2::after {
+    
+    width:64px;
+    height:64px;
+    content: "";
+    background: url('https://freesvg.org/img/Hearts-Arrow.png') no-repeat;
+    background-size: 60px;
+    right: -50px;
+    top: 42%;
+    transform: rotate(180deg);
+}
+
+/*triangle spans*/
+span {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+/*Wheel 2 Boxes*/
+.span1w2 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: #ffeb3b;
+    left: 0;
+    height: 100%;
+}
+.span2w2 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: #e91e63;
+    right: 0;
+    height: 100%;
+}
+
+/*Wheel 3 Boxes*/
+.span1w3 {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 80%);
+    background-color: #ffeb3b;
+    left: 0;
+    height: 100%;
+}
+.span2w3 {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 50%);
+    background-color: #e91e63;
+    right: 0;  
+    height: 100%;
+}
+.span3w3 {
+    transform: rotate(90deg);
+    background-color: red;
+    clip-path: polygon(60% 0%, 100% 0, 100% 50%, 100% 100%, 60% 100%, 0% 50%);
+    right: 25%;
+    top: 25%;
+    height: 100%;
+}
+
+/*Wheel 4 Boxes*/
+.span1w4 {
+    background-color: #ffeb3b;
+    left: 0;
+}
+.span2w4 {
+    background-color: #e91e63;
+    right:0;
+    top: 0; 
+}
+.span3w4 {
+    background-color: red;
+    bottom: 0%;
+    left: 0%;
+}
+.span4w4 {
+    background-color: blue;
+    right: 0%;
+    bottom: 0%;
+}
+
+/*Wheel 5 Boxes*/
+.span1w5 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 72%);
+    background-color: #ffeb3b;
+    left: 0;
+}
+.span2w5 {
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+    background-color: #e91e63;
+    right:0;
+    top: 0;
+}
+.span3w5 {
+    clip-path: polygon(0 0, 100% 22.5%, 28% 100%, 0 100%);
+    background-color: red;
+    bottom: 0%;
+    left: 0%;
+    height: 322px;
+}
+.span4w5 {
+    clip-path: polygon(0 22.5%, 100% 0, 100% 100%, 72% 100%);
+    height: 322px;
+    background-color: #3ded97;
+    right: 0%;
+    bottom: 0%;
+}
+.span5w5 {
+    clip-path: polygon(50% 0%, 14% 100%, 86% 100%);
+    width: 100%;
+    background-color:#ff00ff;
+    left: 0;
+    bottom: 0; 
+}
+
+/*Wheel 6 Boxes*/
+.span1w6 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+    background-color: #D12E5F;
+    left: 0;
+}
+.span2w6 {
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+    background-color: #D18EA2;
+    right:0;
+    top: 0;
+}
+.span3w6 {
+    clip-path: polygon(0 20%, 100% 50%, 100% 50%, 0 80%);
+    background-color: #8519C2;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+}
+.span4w6 {
+    clip-path: polygon(0 50%, 100% 20%, 100% 80%, 0% 50%);
+    height: 100%;
+    background-color: #0AFAB2;
+    right: 0%;
+    bottom: 0%;
+}
+.span5w6 {
+    clip-path:polygon(0 60%, 100% 0%, 100% 100%, 0% 100% );
+    background-color:#542433;
+    left: 0;
+    bottom: 0;
+}
+.span6w6 {
+    clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
+    background-color:red;
+    right: 0;
+    bottom: 0;
+}
+
+/*Wheel 7 Boxes*/
+.span1w7 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 28%);
+    background-color: #D12E5F;
+    left: 0;
+}
+
+.span2w7 {
+    clip-path: polygon(0 0, 100% 0, 100% 28%, 0% 100%);
+    background-color: #D18EA2;
+    right:0;
+    top: 0;
+}
+
+.span3w7 {
+    clip-path: polygon(0 28%, 0 14%, 100% 50%, 0 60%);
+    left: 0;
+    background-color: blue;
+    height: 100%;
+}
+.span4w7 {
+    clip-path: polygon(0 50%, 100% 14%, 100% 60%, 0 50%);
+    right: 0;
+    background-color: rgba(155,155,155, .5);
+    height: 100%;
+}
+.span5w7 {
+    clip-path: polygon(0 94%, 0 60%, 100% 50%, 40% 100%);
+    background-color: rgba(0,0,0,.3);
+    left: 0;
+    bottom: 0;
+    height: 100%;
+}
+.span6w7 {
+    clip-path: polygon(0 50%, 100% 60%, 100% 94%, 55% 100%);
+    background-color:red;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+.span7w7 {
+    clip-path: polygon(20% 100%, 50% 0, 78% 100%, 50% 100%);
+    width: 100%;
+    background-color: rgba(0, 255, 255, .5);
+    bottom: 0;
+    left: 0;
+}
+/*Wheel 8 135deg box*/
+#d3 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    border: 10px solid white;
+    overflow: hidden;
+    transition: all ease 5s;
+}
+#d5 {
+    width: 100%;
+    height: 100%;
+    transform: rotate(135deg);
+}
+/*Wheel 8 Boxes*/
+.span1w8 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    background-color: orange;
+    left: 0;
+}
+.span2w8 {
+    clip-path: polygon(0 0, 34% 0, 100% 0, 0% 100%);
+    background-color: red;
+    right:0;
+    top: 0;
+}
+.span3w8 {
+clip-path: polygon(0 0, 0 100%, 100% 100%);
+  left: 0;
+  background-color: blue;
+}
+.span4w8 {
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    top: 0;
+    right: 0;
+    background-color: purple;
+}
+.span5w8 {
+    clip-path: polygon(0 100%, 100% 0,    100% 100%);
+    background-color: green;
+    bottom: 0;
+    left:0;
+}
+.span6w8 {
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    background-color: brown;
+    bottom: 0;
+    right: 0;
+}
+.span7w8 {
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    background-color: yellow;
+    bottom: 0;
+    right: 0;
+}
+.span8w8 {
+    clip-path: polygon(0 0, 34% 0, 100% 0, 0% 100%);
+    background-color: magenta;
+    bottom: 0;
+    left:0;
+}
+/*Wheel text*/
+/*Wheel 8*/
+.d4 .span1 b {
+    transform: rotate(-115deg);
+    top: 55%;
+    left: 73%;
+    
+}
+
+.d4 .span2 b {
+    transform: rotate(-70deg);
+    top: 54.5%;
+    left: 0%;
+    
+}
+
+.d4 .span3 b {
+    
+    transform: rotate(200deg);
+    top: 75%;
+    left: 56%;
+}
+
+.d4 .span4 b {
+    transform: rotate(-25deg);
+    top: 74%;
+    left: 20%;
+}
+
+.d4 .span5 b {
+    transform: rotate(110deg);
+    top: 18%;
+    left: 75%;
+}
+
+.d4 .span6 b {
+    transform: rotate(25deg);
+    top: 2%;
+    left: 20%;
+}
+
+.d4 .span7 b {
+    transform: rotate(65deg);
+    top: 20%;
+    left: 0%;
+}
+
+.d4 .span8 b {
+  transform:rotate(155deg);
+  top: 3%;
+  right: 0%;
+}
