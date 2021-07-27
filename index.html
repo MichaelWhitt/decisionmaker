@@ -11,16 +11,18 @@
 
     
     <link rel="stylesheet" href="/css/styles.css"/>
+    <script src="/scripts.js"></script>
+
     <!--Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
 </head>
 
 
 <body>
-     
     <!--Navigation Menu-->
     <section id="section1">
         
@@ -129,42 +131,7 @@
         </div>
     </div>  
 </section>
- 
-                
-    
-<script>
 
-function myfunction(){
-
-    var x = 1024; //min value
-    var y = 9999; //max value
-
-    //var deg = 1511;
-    var deg = Math.floor(Math.random() * (x - y)) + y;
-
-    document.getElementById('box').style.transform = "rotate("+deg+"deg)";
-
-    var element = document.getElementById("mainbox");
-    element.classList.remove("animate");
-    setTimeout(function(){
-        element.classList.add("animate");
-    }, 5000); //5000 = 5s;
-
-    
-}
-document.querySelector('video').playbackRate = .75;
-
-/*Changes span to some new text - make JS for input here*/
-function changeInput(){
-    
-    for (let i= 1; i<9; i++){
-        let x = document.getElementById("input"+i).value;
-        document.getElementById("spanb"+i).innerHTML = x;
-    }
-    
-}
-
-</script>
 
 <!-- Jquery-->
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
