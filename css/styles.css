@@ -20,9 +20,9 @@ section {
     background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
-#s2anchor {
+/* #s2anchor {
     opacity: 0;
-}
+} */
 
 h4, th, td {
     color:white;
@@ -84,16 +84,14 @@ tbody {
 
  /* ----------------- wheel ------------------- */
 
- #inputwheel {
+  /* #inputwheel {
     border: 5px solid #fff;
     border-radius: 15px;
     padding: 10px 10px 0px 10px;
-    margin-top: 8%;
-    width: 100%;
-    
-}
+    margin: 0 auto;
+} */
 
- .mainbox {
+ /* .mainbox {
     margin: auto;
     position: relative;
     width:500px;
@@ -109,13 +107,13 @@ tbody {
      position: absolute;
     
      
- }
- @keyframes animateArrow {
+ } */ 
+ /* @keyframes animateArrow {
      0% {right: -50px;}
      50% {right: -60px;}
- }
+ } */
 
- .mainbox::after {
+ /* .mainbox::after {
     
     width:64px;
     height:64px;
@@ -125,9 +123,9 @@ tbody {
     right: -50px;
     top: 42%;
     transform: rotate(180deg);
- }
+ } */
 
- .box {
+ /* .box {
     
     width: 100%;
     height: 100%;
@@ -136,22 +134,22 @@ tbody {
     border: 10px solid white;
     overflow: hidden;
     transition: all ease 5s;
-}
-
+} */
+/* 
 .box2 {
 
     width: 100%;
     height: 100%;
     transform: rotate(135deg);
 
-}
+} */
 
-span {
+/* span {
  width: 50%;
  height: 50%;
  display: inline-block;
  position: absolute;
-}
+} */
 
 span b {
     width: 65px;
@@ -167,7 +165,7 @@ span b {
     transform: translate(-50%,-50%);
     /*box-shadow: inset 0 3px 3px 0 #717171;*/
 }
-.span1 {
+/* .span1 {
     clip-path: polygon(0 92%, 100% 50%, 0 8%);
     background-color: skyblue;
     top: 120px;
@@ -191,7 +189,7 @@ span b {
     background-color: #3f51b5;
     top: 0;
     left: 120px;
-}
+} */
 
 #spin {
     position: absolute;
@@ -215,7 +213,7 @@ span b {
     color: #000;
     
 }
-
+/* 
 .box1 .span1 b {
     transform: rotate(180deg);
     
@@ -228,9 +226,9 @@ span b {
     transform: rotate(90deg);
     top: 90px;
     left: 90px;
-}
+} */
 
-.box1 .span4 b {
+/* .box1 .span4 b {
     transform: rotate(-90deg);
     top: 90px;
     left: 85px;
@@ -252,7 +250,7 @@ span b {
     transform: rotate(-90deg);
     top: 90px;
     left: 90px;
-}
+} */
 
 input[type="text"]{
     text-align: center;
@@ -269,63 +267,12 @@ input[type="text"]{
 
 /*Md size and lower wheel*/
 @media (max-width: 1264px) { 
-    #mainbox { 
+    /* #mainbox { 
      width:350px;
      height:350px;
      margin-bottom: 100px;
-   } 
-   .box2 {
-    display: none
-}
-
-  .span1 {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    background-color: skyblue;
-    top: 0px;
-    left: 1px;  
-}
-
-.span2 {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    background-color: #e91e63;
-    top: 0px;
-}
-.span3 {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    background-color: #4caf50;
-    bottom: 0;
-    left: 165px;
-}
-.span4 {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    background-color: #3f51b5;
-    top: 165px;
-    left: -1px;
-    width: 51%;
-}
-
-  .box1 .span2 b {
-      transform: rotate(-45deg);
-      position: absolute;
-      top: 82.5px;
-      left: 20px;
-    
-  }
+   }  */
   
-  .box1 .span3 b {
-      transform: rotate(45deg);
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      
-  }
-  
-  .box1 .span4 b {
-      transform: rotate(130deg);
-      position: absolute;
-      top: 20px;
-      right: 20px;
-  }
   #spin {
     position: absolute;
     top: 42%;
@@ -349,41 +296,38 @@ input[type="text"]{
 #hidemd {
     display: none;
 }
+/*breakpoint end curly below*/
  }
 
 /*NEW CSS FOR WHEELS*/
-body {
-    margin: 0; padding: 0;
-}
-/*Section 1*/
-#s1 {
-    text-align: center; 
-    height: 100vh;
-    background: pink;
+
+#inputwheel {
+    border: 5px solid #fff;
+    border-radius: 15px;
+    padding: 10px 10px 0px 10px;
+    margin: 0 auto;
 }
 
-/*Section 2*/
-#s2 
-{
-    text-align: center; 
-    height: 100vh;
-    background: orange;
-}
-
-/*Wheel container's container div*/
-#d1 {
- padding-top: 10%;
-}
-
-/*Wheel container div*/
-#d2 {
+#wheel {
     margin: auto;
     position: relative;
     width:500px;
-    height:500px;
+    height:500px; 
 }
 
-#d2.animate::after {
+#wheelBackground{
+    background: url('https://freesvg.org/img/Hearts-Arrow.png') no-repeat;
+    background-size: 60px;
+    transform: rotate(180deg);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 90%;
+    bottom: -50%;
+    z-index: 100;
+}
+
+/* #wheel.animate::after {
     animation-name: animateArrow;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -391,12 +335,7 @@ body {
     position: absolute;
 }
 
-@keyframes animateArrow {
-    0% {right: -50px;}
-    50% {right: -60px;}
-}
-
-#d2::after {
+#wheel::after {
     
     width:64px;
     height:64px;
@@ -406,7 +345,28 @@ body {
     right: -50px;
     top: 42%;
     transform: rotate(180deg);
+    transition: all ease 5s;
 }
+
+@keyframes animateArrow {
+    0% {right: -50px;}
+    50% {right: -60px;}
+} */
+
+/*Wheel container's container div*/
+#d1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    border: 10px solid white;
+    overflow: hidden;
+    transition: all ease 5s;
+}
+
+
+/*Wheel container div*/
+
 
 /*triangle spans*/
 span {
@@ -594,20 +554,6 @@ span {
     left: 0;
 }
 
-#d3 {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 50%;
-    border: 10px solid white;
-    overflow: hidden;
-    transition: all ease 5s;
-}
-#d5 {
-    width: 100%;
-    height: 100%;
-    transform: rotate(135deg);
-}
 /*Wheel 8 Boxes*/
 .span1w8 {
     clip-path: polygon(0 0, 100% 0, 100% 100%);
@@ -658,7 +604,7 @@ clip-path: polygon(0 0, 0 100%, 100% 100%);
 /*Wheel text*/
 
 
-/*Wheel 8*/
+/*Wheel 8 text*/
 .d4 .span1 b {
     transform: rotate(-115deg);
     top: 55%;
@@ -709,3 +655,5 @@ clip-path: polygon(0 0, 0 100%, 100% 100%);
   top: 3%;
   right: 0%;
 }
+
+/*new css for updated js*/
