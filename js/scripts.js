@@ -61,18 +61,21 @@ function generateWheel(array) {
     wheelContainer.innerHTML = "";
     let d1 = document.createElement("div");
     let spinButton = document.createElement("button");
+    let arrow = document.createElement("span");
     d1.id = "d1";
     d1.className = "d1";
     spinButton.id = "spin";
     spinButton.textContent = "Spin!";
+    arrow.id="wheelBackground";
  
 
     wheelContainer.appendChild(d1);
     wheelContainer.appendChild(spinButton);
+    wheelContainer.appendChild(arrow);
 
     spinButton.onclick = function addSpin() {
-      var x = 2;
-      var y = 500;
+      var x = 7177;
+      var y = 7536;
       var deg = Math.floor(Math.random() * (x - y)) + y;
 
         let z = document.getElementById('d1').style.transform = "rotate("+deg+"deg)";
@@ -94,6 +97,9 @@ function generateWheel(array) {
       boldText.textContent = array[i];
       span.classList.add("span" + (i + 1) + "w" + array.length);
       span.appendChild(boldText);
+      boldText.textContent = "Indians"; // DELETE THIS
+      // css change for if input value is mediterranean 10 or more, 16px, else 20px
+      // css change if less than 8, 26px
       d1.appendChild(span);
 
     }
