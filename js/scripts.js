@@ -97,7 +97,7 @@ function generateWheel(array) {
       boldText.textContent = array[i];
       span.classList.add("span" + (i + 1) + "w" + array.length);
       span.appendChild(boldText);
-      boldText.textContent = "Indians"; // DELETE THIS
+      boldText.textContent = "MIIIIII"; // DELETE THIS
       // css change for if input value is mediterranean 10 or more, 16px, else 20px
       // css change if less than 8, 26px
       d1.appendChild(span);
