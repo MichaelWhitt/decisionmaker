@@ -428,7 +428,51 @@ clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
 /*Wheel text*/
 
+.d1 .span1w7 b {
+    transform: rotate(-120deg);
+    height: 50px;
+    top: 55%;
+    left: 62%;
+    
+}
 
+.d1 .span2w7 b {
+    transform: rotate(-65deg);
+    height: 50px;
+    top: 50%;
+    left: -3%;
+}
+
+.d1 .span3w7 b {
+    transform: rotate(190deg);
+    height: 50px;
+    top: 41%;
+    left: 44%;
+}
+
+.d1 .span4w7 b {
+    transform: rotate(-13deg);
+    top: 37%;
+    left: 22%;
+}
+
+.d1 .span5w7 b {
+    transform: rotate(150deg);
+    top: 54%;
+    right: 80%;
+}
+
+.d1 .span6w7 b {
+    transform: rotate(35deg);
+    top: 54%;
+    left: 17%;
+}
+
+.d1 .span7w7 b {
+    transform: rotate(90deg);
+    top: 26%;
+    left: 41.5%;
+}
 /*Wheel 8 text*/
 .d1 .span1w8 b {
     transform: rotate(-112.5deg);
