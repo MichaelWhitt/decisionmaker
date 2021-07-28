@@ -434,7 +434,39 @@ clip-path: polygon(0 0, 0 100%, 100% 100%);
 /*Wheew6l 4 Text*/
 
 /*Wheel 5 Text*/
+.d1 .span1w5 b {
+    transform: rotate(-130deg);
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    
+}
 
+.d1 .span2w5 b {
+    transform: rotate(-51deg);
+    height: 50px;
+    top: 45.5%;
+    left: 10%;
+    
+}
+
+.d1 .span3w5 b {
+    transform: rotate(160deg);
+    top: 22%;
+    left: 35%;
+}
+
+.d1 .span4w5 b {
+    transform: rotate(15deg);
+    top: 22%;
+    left: 31%;
+}
+
+.d1 .span5w5 b {
+    transform: rotate(90deg);
+    top: 35%;
+    left: 41.5%;
+}
 /*Wheel 6 Text*/
 .d1 .span1w6 b {
     transform: rotate(-120deg);
