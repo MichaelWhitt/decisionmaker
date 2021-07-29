@@ -4,11 +4,16 @@ html {
 body {
     background-color: black;
     font-family: 'Permanent Marker', cursive;
+    background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 section {
     height: 100vh;
+    box-sizing: border-box;
     width: 100%;
+    /* overflow: auto; */
+    
 }
 
 #section2 {
@@ -18,6 +23,7 @@ section {
     background: black;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%vh;
 
 }
 
@@ -87,7 +93,7 @@ span b {
     height: 65px;
     line-height: 65px;
 /*    border-radius: 50%;*/
-    font-size: 36px;
+    font-size: 18px;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -130,8 +136,12 @@ input[type="text"]{
 #inputwheel {
     border: 5px solid #fff;
     border-radius: 15px;
-    padding: 10px 10px 0px 10px;
     margin: 0 auto;
+    
+}
+
+.row {
+    height: inherit;
 }
 
 #wheel {
@@ -154,33 +164,6 @@ input[type="text"]{
     z-index: 100;
 }
 
-
-/* animate arrow*/
-/* #wheelBackground.animate::after {
-    animation-name: animateArrow;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    position: absolute;
-}
-
-#wheelBackground::after {
-    
-    width:64px;
-    height:64px;
-    content: "";
-    background: url('https://freesvg.org/img/Hearts-Arrow.png') no-repeat;
-    background-size: 60px;
-    right: -50px;
-    top: 42%;
-    transform: rotate(180deg);
-    transition: all ease 5s;
-}
-
-@keyframes animateArrow {
-    0% {right: -50px;}
-    50% {right: -60px;}
-}  */
 
 /*Wheel container's container div*/
 #d1 {
@@ -392,9 +375,9 @@ span {
     top: 0;
 }
 .span3w8 {
-clip-path: polygon(0 0, 0 100%, 100% 100%);
-  left: 0;
-  background-color: #FFADAD;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    left: 0;
+    background-color: #FFADAD;
 }
 .span4w8 {
     clip-path: polygon(0 100%, 100% 0, 100% 100%);
@@ -630,7 +613,7 @@ clip-path: polygon(0 0, 0 100%, 100% 100%);
 .d1 .span2w8 b {
     transform: rotate(-67.5deg);
     top: 44.5%;
-    left: -2px;
+    left: 0%;
     
 }
 
@@ -671,45 +654,287 @@ clip-path: polygon(0 0, 0 100%, 100% 100%);
   left: 43%;
 }
 
-/*Breakpoints*/
+/*-------------------------------------------------------------Breakpoints------------------------------------------------------------------*/
 @media (max-width: 576px) { 
-    th, td { font-size: .9rem} 
-    /*#s2anchor {display:none}*/
+    
     #inputwheel {border: none; margin: 0;}
-    #li1 {columns: 2;}
+    #li1, #li2 {columns: 2;}
+    #li1 {margin-right: 15px;}
+    table, #form1 > div.container.text-center.pb-2 > h4 {display: none;}
+    #wheel {
+        margin: auto;
+        position: relative;
+        width:300px;
+        height:300px; 
+    }
+    #spin {
+        position: absolute;
+        top: 41.5%;
+        left: 42%;
+        transform: translate(-50% -50%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        background-color: #ff00ff;
+        color: #fff;
+        box-shadow: 0 5px 20px #000;
+        font-weight: bold;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    span b {font-size: 15px;}
+    #wheelBackground {
+        top: 36.5%;
+        background-size: 40px;
+    }
+
+    /*------------Wheel text-----------*/
+
+/*Wheel 2 Text*/
+.d1 .span1w2 b {
+    transform: rotate(180deg);
+    height: 50px;
+    top: 45.5%;
+    left: 40%;
+    
+}
+
+.d1 .span2w2 b {
+    transform: rotate(0deg);
+    height: 50px;
+    left: 17%;
+    top: 40%;
+    
 }
 
 
-/*Md size and lower wheel*/
-@media (max-width: 1264px) { 
-    /* #mainbox { 
-     width:350px;
-     height:350px;
-     margin-bottom: 100px;
-   }  */
-  
-  #spin {
-    position: absolute;
-    top: 42%;
-    left: 42%;
-    transform: translate(-50% -50%);
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    background-color: #ff00ff;
-    color: #000;
-    box-shadow: 0 5px 20px #000;
-    font-weight: bold;
-    font-size: 22px;
-    cursor: pointer;
+
+/*Wheel 3 Text*/
+.d1 .span1w3 b {
+    transform: rotate(210deg);
+    height: 50px;
+    top: 35%;
+    left: 41%;
+    
 }
-#spin:hover{
-    background-color: #3ded97;
-    color: black;
+
+.d1 .span2w3 b {
+    transform: rotate(-30deg);
+    height: 50px;
+    left: 8%;
+    top: 30%;
+    
 }
-#hidemd {
-    display: none;
+
+.d1 .span3w3 b {
+    transform: rotate(0deg);
+    top: 39%;
+    left: 17%;
 }
-/*breakpoint end curly below*/
- }
+
+/*Wheel 4 Text*/
+.d1 .span1w4 b {
+    transform: rotate(-135deg);
+    height: 50px;
+    top: 58%;
+    left: 46%;
+    
+}
+
+.d1 .span2w4 b {
+    transform: rotate(-45deg);
+    height: 50px;
+    left: -4%;
+    
+}
+
+.d1 .span3w4 b {
+    transform: rotate(135deg);
+    top: 7%;
+}
+
+.d1 .span4w4 b {
+    transform: rotate(45deg);
+    top: 8%;
+    left: 9%;
+}
+/*Wheel 5 Text*/
+.d1 .span1w5 b {
+    transform: rotate(-130deg);
+    height: 50px;
+    top: 53%;
+    left: 47%;
+    
+}
+
+.d1 .span2w5 b {
+    transform: rotate(-51deg);
+    height: 50px;
+    top: 45.5%;
+    left: -2%;
+    
+}
+
+.d1 .span3w5 b {
+    transform: rotate(160deg);
+    top: 16%;
+    left: 38%;
+}
+
+.d1 .span4w5 b {
+    transform: rotate(15deg);
+    top: 15%;
+    left: 18%;
+}
+
+.d1 .span5w5 b {
+    transform: rotate(90deg);
+    top: 20%;
+    left: 38.5%;
+}
+/*Wheel 6 Text*/
+.d1 .span1w6 b {
+    transform: rotate(-120deg);
+    height: 50px;
+    top: 50%;
+    left: 54%;
+    
+}
+
+.d1 .span2w6 b {
+    transform: rotate(-60deg);
+    height: 50px;
+    top: 46%;
+    left: -11%;
+
+    
+}
+
+.d1 .span3w6 b {
+    
+    transform: rotate(180deg);
+    height: 50px;
+    top: 44%;
+    left: 37%;
+}
+
+.d1 .span4w6 b {
+    transform: rotate(0deg);
+    top: 39%;
+    left: 20%;
+}
+
+.d1 .span5w6 b {
+    transform: rotate(120deg);
+    top: 13%;
+    left: 57%;
+}
+
+.d1 .span6w6 b {
+    transform: rotate(60deg);
+    top: 13%;
+    left: -1%;
+}
+
+/*Wheel 7 Text*/
+.d1 .span1w7 b {
+    transform: rotate(-120deg);
+    height: 50px;
+    top: 51%;
+    left: 56%;
+    
+}
+
+.d1 .span2w7 b {
+    transform: rotate(-65deg);
+    height: 50px;
+    top: 46%;
+    left: -11%;
+}
+
+.d1 .span3w7 b {
+    transform: rotate(190deg);
+    height: 50px;
+    top: 40%;
+    left: 38%;
+}
+
+.d1 .span4w7 b {
+    transform: rotate(-13deg);
+    top: 34%;
+    left: 20%;
+}
+
+.d1 .span5w7 b {
+    transform: rotate(145deg);
+    top: 49%;
+    left: 46%;
+    
+}
+
+.d1 .span6w7 b {
+    transform: rotate(35deg);
+    top: 50%;
+    left: 8%;
+}
+
+.d1 .span7w7 b {
+    transform: rotate(90deg);
+    top: 15%;
+    left: 38.5%;
+}
+/*Wheel 8 text*/
+.d1 .span1w8 b {
+    transform: rotate(-112.5deg);
+    top: 38%;
+    left: 62%;
+    
+}
+
+.d1 .span2w8 b {
+    transform: rotate(-67.5deg);
+    top: 35%;
+    left: -5%;
+    
+}
+
+.d1 .span3w8 b {
+    
+    transform: rotate(202.5deg);
+    top: 60%;
+    left: 35%;
+}
+
+.d1 .span4w8 b {
+    transform: rotate(-22.5deg);
+    top: 58%;
+    left: 22%;
+}
+
+.d1 .span5w8 b {
+    transform: rotate(112.5deg);
+    top: 18%;
+    left: 61%;
+}
+
+.d1 .span6w8 b {
+    transform: rotate(22.5deg);
+    top: -4%;
+    left: 22%;
+}
+
+.d1 .span7w8 b {
+    transform: rotate(67.5deg);
+    top: 18%;
+    left: -5%;
+}
+
+.d1 .span8w8 b {
+  transform:rotate(157.5deg);
+  top: -7%;
+  left: 40%;
+}
+
+}
+

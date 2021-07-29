@@ -54,11 +54,11 @@
         
     </section> 
 
-    <section id="section2">
+    <section id="section2" class="sm-pt-0">
     <div class="container" id="inputwheel">
         <div class="row">
             <!--Input Form-->
-            <div class="col-lg-6 pb-5 pt-2">
+            <div class="col-lg-6 m-pb-5 pb-2 m-pt-2">
                 
                 <form id="form1" name="form1" action="/action_page.php">
                     <table class="table">
@@ -77,7 +77,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">Step 3:</th>
-                                <td>Click "Spin" in the Center of the Wheel</td>
+                                <td>Click "Spin!" in the Center of the Wheel</td>
                             </tr>
                             
                         </tbody>
@@ -91,7 +91,7 @@
                             <input type="text" id="input4" name="input4" placeholder="Option 4" class="form-control form-group" required>
                         </li>
                     </ul>
-                    <ul id="hidemd">
+                    <ul>
                         <li class="list-unstyled col-form-label ml-1" id="li2">
                             <input type="text" id="input5" name="input5" placeholder="Option 5" class="form-control form-group" required>
                             <input type="text" id="input6" name="input6" placeholder="Option 6" class="form-control form-group" required>
@@ -118,7 +118,8 @@
                     <span class="span7w8"><b id="spanb7">Korean</b></span>
                     <span class="span8w8"><b id="spanb8">Cajun</b></span>
                 </div>
-                <button id="spin">Go!</button>
+                <button id="spin" onclick="addSpin();">Spin!</button>
+                <span id="wheelBackground"></span>
             </div>
         </div>
     </div>  
