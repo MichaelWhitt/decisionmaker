@@ -51,6 +51,37 @@ h4, th, td {
     font-size: 2rem;
 }
 
+/*Modal*/
+#modalLink {
+color: #3ded9a;
+}
+#modalLink:hover {
+    color: #3ded9a;
+    cursor: pointer;
+    color: #ff00ff;
+    }
+
+#leaderModal text {
+        color: white;
+        font-size: 2rem;
+    }
+#leaderModal table {
+    border:none;
+}
+#leaderModalTitle {
+    font-size: 1.5rem;
+}
+
+#leaderModal .card-header {
+    background:  -webkit-linear-gradient(to right, #2ebf91, #8360c3);
+    background: linear-gradient(to right, #2ebf91, #8360c3);
+}
+
+#leaderModal th, #leaderModal td {
+    color:#ff00ff;
+}
+/*End Modal*/
+
 
 form .container ul {
    padding: 0; 

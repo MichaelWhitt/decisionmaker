@@ -23,9 +23,10 @@
 
 
 <body>
+    
     <!--Navigation Menu-->
     <section id="section1">
-        
+    
     <div class="container" > 
         <div class="row text-center text-sm-left ">
             <div class="col" >
@@ -39,7 +40,80 @@
                     <li style="color:white;">Helping you decide what to { eat }</li>
                     <li class="nav-item active"><a href="index.html">Home</a></li>
                     <li class="nav-item"><a href="profile.html">Profile</a></li>
-                    <li class="nav-item"><a href="leaderboard.html">Leaderboard</a></li>
+                    <li class="nav-item">
+                        <!-- Button trigger modal -->
+                        <a id="modalLink" data-toggle="modal" data-target="#leaderModal">
+                            Leaderboards
+                        </a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="leaderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="leaderModalTitle">Leaderboards</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                <div class="card">
+                                    <div class="card-header text-center ">
+                                            <text>Top 5 Users</text>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <table class="table">
+                                            <thead>
+                                              <tr >
+                                                <th scope="col">#</th>
+                                                <th scope="col">Username</th>
+                                                <th scope="col">Spin Count</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">1</th>
+                                                <td>Flux</td>
+                                                <td>2,145</td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">2</th>
+                                                <td>Kiba</td>
+                                                <td>1,799</td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">3</th>
+                                                <td>NinaYan</td>
+                                                <td>1,556</td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">4</th>
+                                                <td>Corsairx</td>
+                                                <td>1,554</td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">5</th>
+                                                <td>Destro</td>
+                                                <td>1,522</td>
+                                                
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!--End Modal-->
+                    </li>
+                    
                 </ul>
             </div>
         </div>  
