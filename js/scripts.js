@@ -62,39 +62,39 @@ function generateWheel(array) {
       // css change for if input value is mediterranean 10 or more, 16px, else 20px
       // css change if less than 8, 26px
       d1.appendChild(span);
-
-      // switch statement generate wheel spin
-    let wheelSpanCount = array.length;
-    
-    if (wheelSpanCount === 2){
-        spinButton.setAttribute("onclick", "addSpin(7110, 7470);");
-    } else if (wheelSpanCount === 3){
-        spinButton.setAttribute("onclick", "addSpin(7170, 7528);");
-        console.log("3");
-    }
-    else if (wheelSpanCount === 4){
-        spinButton.setAttribute("onclick", "addSpin(7201, 7559);");
-        console.log("4");
-    }
-    else if (wheelSpanCount === 5){
-        spinButton.setAttribute("onclick", "addSpin(7150, 7509);");
-        console.log("5");
-    }
-    else if (wheelSpanCount === 6){
-        spinButton.setAttribute("onclick", "addSpin(7170, 7529);");
-        console.log("6");
-    }
-    else if (wheelSpanCount === 7){
-        spinButton.setAttribute("onclick", "addSpin(7189, 7548);");
-        console.log("7");
-    }
-    else if (wheelSpanCount === 8){
-        spinButton.setAttribute("onclick", "addSpin(7155, 7515);");
-        console.log("8");
-    }
-
-    }
   }
+  // ifstatement generate wheel spin with trackable degrees
+  let wheelSpanCount = array.length;
+  if (wheelSpanCount === 2){
+      spinButton.setAttribute("onclick", "addSpin(7110, 7470);");
+  } else if (wheelSpanCount === 3){
+      spinButton.setAttribute("onclick", "addSpin(7170, 7528);");
+      console.log("3");
+  }
+  else if (wheelSpanCount === 4){
+      spinButton.setAttribute("onclick", "addSpin(7201, 7559);");
+      console.log("4");
+  }
+  else if (wheelSpanCount === 5){
+      spinButton.setAttribute("onclick", "addSpin(7150, 7509);");
+      console.log("5");
+  }
+  else if (wheelSpanCount === 6){
+      spinButton.setAttribute("onclick", "addSpin(7170, 7529);");
+      console.log("6");
+  }
+  else if (wheelSpanCount === 7){
+      spinButton.setAttribute("onclick", "addSpin(7189, 7548);");
+      console.log("7");
+  }
+  else if (wheelSpanCount === 8){
+      spinButton.setAttribute("onclick", "addSpin(7155, 7515);");
+      console.log("8");
+  }
+
+}
+
+
 
   
 $(function(){
