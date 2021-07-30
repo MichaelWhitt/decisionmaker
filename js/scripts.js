@@ -1,71 +1,3 @@
-function addSpin(){
-    // 20-21 rotations for variation.
-    //var x = 7177; //default min value (w8)
-    //var y = 7536; //default max value (w8)
-    var x = 7470; //min value
-    var y = 7470; //max value
-
-//Wheel 2 degree values
-    // span 1 degrees (light blue) = 7291 - 7470
-    // span 2 degrees (light green) = 7110 - 7290
-//Wheel 3 degree values
-    // span 1 degrees (light blue) = 7291 - 7411
-    // span 2 degrees (light green) = 7170 - 7290
-    // span 3 degrees (dark pink) =  7412 - 7528
-//Wheel 4 degree values
-    // span 1 degrees (light blue) = 7291 - 7380
-    // span 2 degrees (light green) = 7201 - 7290
-    // span 3 degrees (dark pink) =  7381 - 7469
-    // span 4 degrees (orange) = 7470 - 7559
-//Wheel 5 degree values
-    // span 1 degrees (light blue) = 7291 - 7363
-    // span 2 degrees (light green) = 7217 - 7290
-    // span 3 degrees (dark pink) =  7364 - 7430
-    // span 4 degrees (orange) = 7150 - 7216
-    // span 5 degrees = (yellow) = 7431 - 7509
-//Wheel 6 degree values
-    // span 1 degrees (light blue) = 7291 - 7349
-    // span 2 degrees (light green) = 7232 - 7290
-    // span 3 degrees (dark pink) =  7350 - 7410
-    // span 4 degrees (orange) = 7170 - 7231
-    // span 5 degrees = (yellow) = 7411 - 7470
-    // span 6 degrees (dark blue) = 7471 -7529
-//Wheel 7 degree values
-    // span 1 degrees (light blue) = 7291 - 7344 (53)
-    // span 2 degrees (light green) = 7236 - 7290 (54)
-    // span 3 degrees (dark pink) = 7345 - 7391 (46) 
-    // span 4 degrees (orange) = 7189 - 7235 (46)
-    // span 5 degrees = (yellow) = 7392 - 7439 (47)
-    // span 6 degrees (dark blue) = 7500 - 7548 (48)
-    // span 7 degrees (purple) = 7440 - 7499 (59)
-//Wheel 8 degree values
-    /*
-    span 1 degrees (light blue)= 7291 - 7335
-    span 2 degrees (light green) = 7246 - 7290 
-    span 3 degrees (dark salmon)= 7336 - 7380
-    span 4 degrees (salmon) = 7200 - 7245 
-    span 5 degrees (yellow) = 7426 - 7470
-    span 6 degrees (dk blue) = 7155 - 7199(6) (45)
-    span 7 degrees (purple) =  7471 - 7515
-    span 8 degrees (pink) = 7381 - 7425
-    */
-
-    //works even on multiple clicks, but doesn't spin much since it's already gone through 20 spins. 
-
-    
-    var deg = Math.floor(Math.random() * (x - y)) + y;
-
-    let z = document.getElementById('d1').style.transform = "rotate("+deg+"deg)";
-    console.log(z);
-
-    //adds animation to arrow
-    // var element = document.getElementById("#wheelBackground");
-    // element.classList.remove("animate");
-    // setTimeout(function(){
-    //     element.classList.add("animate");
-    // }, 5000); //5000 = 5s;
-}
-
 function changeInput(){
     let countArray = [];
     for (let i= 1; i<9; i++){
@@ -84,7 +16,17 @@ function changeInput(){
     }
 }
 
+function addSpin(x,y){
+    // 20-21 rotations for variation.
+    //var x = 7177; //default min value (w8)
+    //var y = 7536; //default max value (w8)
+    var x = x; //min value
+    var y = y; //max value
+    var deg = Math.floor(Math.random() * (x - y)) + y;
 
+    let z = document.getElementById('d1').style.transform = "rotate("+deg+"deg)";
+    console.log(deg);
+}
 
 function generateWheel(array) {
     let wheelContainer = document.getElementById("wheel");
@@ -98,14 +40,14 @@ function generateWheel(array) {
     spinButton.id = "spin";
     spinButton.textContent = "Spin!";
     arrow.id="wheelBackground";
- 
+    // spin button create
+    //spinButton.setAttribute("onclick", "addSpin();");
 
     wheelContainer.appendChild(d1);
     wheelContainer.appendChild(spinButton);
     wheelContainer.appendChild(arrow);
-    //spin wheel button
-    spinButton.setAttribute("onclick", "addSpin();");
-
+    
+    
 
     // add reset wheel if spin is clicked again
     
@@ -120,6 +62,36 @@ function generateWheel(array) {
       // css change for if input value is mediterranean 10 or more, 16px, else 20px
       // css change if less than 8, 26px
       d1.appendChild(span);
+
+      // switch statement generate wheel spin
+    let wheelSpanCount = array.length;
+    
+    if (wheelSpanCount === 2){
+        spinButton.setAttribute("onclick", "addSpin(7110, 7470);");
+    } else if (wheelSpanCount === 3){
+        spinButton.setAttribute("onclick", "addSpin(7170, 7528);");
+        console.log("3");
+    }
+    else if (wheelSpanCount === 4){
+        spinButton.setAttribute("onclick", "addSpin(7201, 7559);");
+        console.log("4");
+    }
+    else if (wheelSpanCount === 5){
+        spinButton.setAttribute("onclick", "addSpin(7150, 7509);");
+        console.log("5");
+    }
+    else if (wheelSpanCount === 6){
+        spinButton.setAttribute("onclick", "addSpin(7170, 7529);");
+        console.log("6");
+    }
+    else if (wheelSpanCount === 7){
+        spinButton.setAttribute("onclick", "addSpin(7189, 7548);");
+        console.log("7");
+    }
+    else if (wheelSpanCount === 8){
+        spinButton.setAttribute("onclick", "addSpin(7155, 7515);");
+        console.log("8");
+    }
 
     }
   }
