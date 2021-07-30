@@ -9,9 +9,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
 
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+
     
     <link rel="stylesheet" href="/css/styles.css"/>
-    <script src="js/scripts.js"></script>
+    
 
     <!--Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +22,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 
+    <!-- Jquery-->
+ <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+ <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+ <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+ <script src="js/scripts.js"></script>
+    
 </head>
 
 
@@ -39,79 +49,12 @@
                 <ul class="nav navbar-nav">
                     <li style="color:white;">Helping you decide what to { eat }</li>
                     <li class="nav-item active"><a href="index.html">Home</a></li>
-                    <li class="nav-item"><a href="profile.html">Profile</a></li>
+                    <li class="nav-item" ><a id="accountButton">Account <i class="fa fa-sign-in"></i></a></li>
                     <li class="nav-item">
-                        <!-- Button trigger modal -->
-                        <a id="modalLink" data-toggle="modal" data-target="#leaderModal">
+                        <!-- trigger modal -->
+                        <a id="leaderButton" data-toggle="modal" data-target="#leaderModal">
                             Leaderboards
                         </a>
-                        <!-- Modal -->
-                        <div class="modal fade" id="leaderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="leaderModalTitle">Leaderboards</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                </div>
-                                <div class="modal-body">
-                                <div class="card">
-                                    <div class="card-header text-center ">
-                                            <text>Top 5 Users</text>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <table class="table">
-                                            <thead>
-                                              <tr >
-                                                <th scope="col">#</th>
-                                                <th scope="col">Username</th>
-                                                <th scope="col">Spin Count</th>
-                                              </tr>
-                                            </thead>
-                                            <tbody>
-                                              <tr>
-                                                <th scope="row">1</th>
-                                                <td>Flux</td>
-                                                <td>2,145</td>
-                                                
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">2</th>
-                                                <td>Kiba</td>
-                                                <td>1,799</td>
-                                                
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">3</th>
-                                                <td>NinaYan</td>
-                                                <td>1,556</td>
-                                                
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">4</th>
-                                                <td>Corsairx</td>
-                                                <td>1,554</td>
-                                                
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">5</th>
-                                                <td>Destro</td>
-                                                <td>1,522</td>
-                                                
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        <!--End Modal-->
                     </li>
                     
                 </ul>
@@ -121,6 +64,112 @@
                 <source src="https://michaeldwhitt.com/wp-content/uploads/2021/07/Shots-of-Different-Food.mp4" type="video/mp4">
           </video>
     </div>
+    <!-- Leaderboard Modal -->
+    <div class="modal fade" id="leaderModal" tabindex="-1" role="dialog" aria-labelledby="#modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="leaderModalTitle">Leaderboards</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <div class="card">
+                <div class="card-header text-center ">
+                        <text>Top 5 Users</text>
+                </div>
+                <div class="card-body text-center">
+                    <table class="table">
+                        <thead>
+                          <tr >
+                            <th scope="col">#</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Spin Count</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Flux</td>
+                            <td>2,145</td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Kiba</td>
+                            <td>1,799</td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>NinaYan</td>
+                            <td>1,556</td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Corsairx</td>
+                            <td>1,554</td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Destro</td>
+                            <td>1,522</td>
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--End Leaderboard Modal-->
+
+    <!--Account Modal-->
+    <div id="accountModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Account Modal-->
     <div class="container text-center" id="homebutton">
         <a href="#section2"> <button class="btn btn-lg btn-primary">Help Me Decide!</button>  </a>
     </div>
@@ -200,10 +249,8 @@
 </section>
 
 
-<!-- Jquery-->
-<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
 </body>
 
 

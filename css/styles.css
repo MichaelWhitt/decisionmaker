@@ -8,6 +8,10 @@ body {
     background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+#leaderModal > div > div > div.modal-header > button > span {
+    position: relative;
+}
+
 section {
     height: 100vh;
     box-sizing: border-box;
@@ -51,11 +55,11 @@ h4, th, td {
     font-size: 2rem;
 }
 
-/*Modal*/
-#modalLink {
+/*Modals*/
+#leaderButton, #accountButton {
 color: #3ded9a;
 }
-#modalLink:hover {
+#leaderButton:hover, #accountButton:hover {
     color: #3ded9a;
     cursor: pointer;
     color: #ff00ff;
@@ -108,6 +112,7 @@ tbody {
 .nav-item a:hover {
     color:#ff00ff;
     text-decoration: none;
+   
 }
 
  ul > li.nav-item.active a {

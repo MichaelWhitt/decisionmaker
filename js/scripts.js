@@ -94,3 +94,9 @@ function generateWheel(array) {
     }
   }
 
+  
+$(function(){
+    $("#accountButton").click(function(){
+        $("#accountModal").modal("toggle")
+    });
+});
