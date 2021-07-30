@@ -46,8 +46,6 @@ function generateWheel(array) {
     wheelContainer.appendChild(d1);
     wheelContainer.appendChild(spinButton);
     wheelContainer.appendChild(arrow);
-    
-    
 
     // add reset wheel if spin is clicked again
     
@@ -63,33 +61,27 @@ function generateWheel(array) {
       // css change if less than 8, 26px
       d1.appendChild(span);
   }
-  // ifstatement generate wheel spin with trackable degrees
+  // if statement generate wheel spin with trackable degrees
   let wheelSpanCount = array.length;
   if (wheelSpanCount === 2){
       spinButton.setAttribute("onclick", "addSpin(7110, 7470);");
   } else if (wheelSpanCount === 3){
       spinButton.setAttribute("onclick", "addSpin(7170, 7528);");
-      console.log("3");
   }
   else if (wheelSpanCount === 4){
       spinButton.setAttribute("onclick", "addSpin(7201, 7559);");
-      console.log("4");
   }
   else if (wheelSpanCount === 5){
       spinButton.setAttribute("onclick", "addSpin(7150, 7509);");
-      console.log("5");
   }
   else if (wheelSpanCount === 6){
       spinButton.setAttribute("onclick", "addSpin(7170, 7529);");
-      console.log("6");
   }
   else if (wheelSpanCount === 7){
       spinButton.setAttribute("onclick", "addSpin(7189, 7548);");
-      console.log("7");
   }
   else if (wheelSpanCount === 8){
       spinButton.setAttribute("onclick", "addSpin(7155, 7515);");
-      console.log("8");
   }
 
 }
