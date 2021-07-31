@@ -76,10 +76,34 @@ function generateWheel(array) {
         }
     });
   } else if (wheelSpanCount === 3){
-      spinButton.setAttribute("onclick", "addSpin(7170, 7528);");
-  }
-  else if (wheelSpanCount === 4){
-      spinButton.setAttribute("onclick", "addSpin(7201, 7559);");
+    
+    $("#spin").click(function(){
+        let wheelDeg = addSpin(7170,7528);
+        console.log(wheelDeg);
+        if (wheelDeg > 7412 && wheelDeg < 7528) {
+            console.log("Winning Span: "+document.getElementById("spanb3").textContent);
+        } else if (wheelDeg > 7170 && wheelDeg < 7290){
+            console.log("Winning Span: "+document.getElementById("spanb2").textContent);
+        } else {
+            console.log("Winning Span: "+document.getElementById("spanb1").textContent);
+        }
+    });
+
+} else if (wheelSpanCount === 4){
+      
+      $("#spin").click(function(){
+        let wheelDeg = addSpin(7201,7559);
+        console.log(wheelDeg);
+        if (wheelDeg > 7470 && wheelDeg < 7559) {
+            console.log("Winning Span: "+document.getElementById("spanb4").textContent);
+        } else if (wheelDeg > 7381 && wheelDeg < 7469){
+            console.log("Winning Span: "+document.getElementById("spanb3").textContent);
+        } else if (wheelDeg > 7201 && wheelDeg < 7290){
+                console.log("Winning Span: "+document.getElementById("spanb2").textContent);
+        } else {
+            console.log("Winning Span: "+document.getElementById("spanb1").textContent);
+        }
+    });
   }
   else if (wheelSpanCount === 5){
       spinButton.setAttribute("onclick", "addSpin(7150, 7509);");
