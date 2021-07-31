@@ -16,6 +16,7 @@ function changeInput(){
     }
 }
 
+
 function addSpin(x,y){
     // 20-21 rotations for variation.
     //var x = 7177; //default min value (w8)
@@ -25,7 +26,7 @@ function addSpin(x,y){
     var deg = Math.floor(Math.random() * (x - y)) + y;
 
     let z = document.getElementById('d1').style.transform = "rotate("+deg+"deg)";
-    console.log(deg);
+    return deg;
 }
 
 function generateWheel(array) {
@@ -64,7 +65,16 @@ function generateWheel(array) {
   // if statement generate wheel spin with trackable degrees
   let wheelSpanCount = array.length;
   if (wheelSpanCount === 2){
-      spinButton.setAttribute("onclick", "addSpin(7110, 7470);");
+      //spinButton.setAttribute("onclick", "addSpin(7110, 7470);");
+      $("#spin").click(function(){
+        let wheelDeg = addSpin(7110,7470);
+        if (wheelDeg > 7109 && wheelDeg < 7291) {
+            console.log("Winning Span: "+document.getElementById("spanb2").textContent);
+            
+        } else {
+            console.log("Winning Span: "+document.getElementById("spanb1").textContent);
+        }
+    });
   } else if (wheelSpanCount === 3){
       spinButton.setAttribute("onclick", "addSpin(7170, 7528);");
   }
@@ -91,6 +101,8 @@ $(function(){
         $("#accountModal").modal("toggle")
     });
 });
+
+
 
 
 //NOTES
