@@ -471,22 +471,22 @@ span {
     transform: rotate(210deg);
     height: 50px;
     top: 35%;
-    left: 48%;
+    left: 42%;
     
 }
 
 .d1 .span2w3 b {
     transform: rotate(-30deg);
     height: 50px;
-    left: 15%;
-    top: 32%;
+    left: 25%;
+    top: 30%;
     
 }
 
 .d1 .span3w3 b {
     transform: rotate(0deg);
     top: 41%;
-    left: 25%;
+    left: 30%;
 }
 
 /*Wheel 4 Text*/
@@ -596,29 +596,29 @@ span {
 .d1 .span1w7 b {
     transform: rotate(-120deg);
     height: 50px;
-    top: 55%;
-    left: 62%;
+    top: 48%;
+    left: 58%;
     
 }
 
 .d1 .span2w7 b {
     transform: rotate(-65deg);
     height: 50px;
-    top: 50%;
-    left: -3%;
+    top: 45%;
+    left: 0%;
 }
 
 .d1 .span3w7 b {
     transform: rotate(190deg);
     height: 50px;
     top: 41%;
-    left: 44%;
+    left: 40%;
 }
 
 .d1 .span4w7 b {
     transform: rotate(-13deg);
     top: 37%;
-    left: 22%;
+    left: 25%;
 }
 
 .d1 .span5w7 b {
@@ -656,8 +656,8 @@ span {
 .d1 .span3w8 b {
     
     transform: rotate(202.5deg);
-    top: 68%;
-    left: 45%;
+    top: 65%;
+    left: 40%;
 }
 
 .d1 .span4w8 b {
@@ -690,13 +690,13 @@ span {
   left: 43%;
 }
 
-/*-------------------------------------------------------------Breakpoints------------------------------------------------------------------*/
+/*----------------------------------------------------Breakpoints------------------------------------------------------------------*/
 @media (max-width: 576px) { 
     
     #inputwheel {border: none; margin: 0;}
     #li1, #li2 {columns: 2;}
     #li1 {margin-right: 15px;}
-    table, #form1 > div.container.text-center.pb-2 > h4 {display: none;}
+    #instructionsTable, #form1 > div.container.text-center.pb-2 > h4 {display: none;}
     #wheel {
         margin: auto;
         position: relative;
@@ -732,14 +732,14 @@ span {
     transform: rotate(180deg);
     height: 50px;
     top: 45.5%;
-    left: 40%;
+    left: 30%;
     
 }
 
 .d1 .span2w2 b {
     transform: rotate(0deg);
     height: 50px;
-    left: 17%;
+    left: 24%;
     top: 40%;
     
 }
@@ -750,99 +750,101 @@ span {
 .d1 .span1w3 b {
     transform: rotate(210deg);
     height: 50px;
-    top: 35%;
-    left: 41%;
+    top: 32%;
+    left: 32%;
     
 }
 
 .d1 .span2w3 b {
     transform: rotate(-30deg);
     height: 50px;
-    left: 8%;
-    top: 30%;
+    left: 18%;
+    top: 28%;
     
 }
 
 .d1 .span3w3 b {
     transform: rotate(0deg);
-    top: 39%;
-    left: 17%;
+    top: 38%;
+    left: 24%;
 }
 
 /*Wheel 4 Text*/
 .d1 .span1w4 b {
     transform: rotate(-135deg);
     height: 50px;
-    top: 58%;
-    left: 46%;
+    top: 50%;
+    left: 38%;
     
 }
 
 .d1 .span2w4 b {
     transform: rotate(-45deg);
     height: 50px;
-    left: -4%;
+    left: 11%;
+    top: 40%;
     
 }
 
 .d1 .span3w4 b {
     transform: rotate(135deg);
-    top: 7%;
+    top: 15%;
+    left: 43%;
 }
 
 .d1 .span4w4 b {
     transform: rotate(45deg);
-    top: 8%;
-    left: 9%;
+    top: 15%;
+    left: 18%;
 }
 /*Wheel 5 Text*/
 .d1 .span1w5 b {
     transform: rotate(-130deg);
     height: 50px;
-    top: 53%;
-    left: 47%;
+    top: 46%;
+    left: 43%;
     
 }
 
 .d1 .span2w5 b {
     transform: rotate(-51deg);
     height: 50px;
-    top: 45.5%;
-    left: -2%;
+    top: 38%;
+    left: 5%;
     
 }
 
 .d1 .span3w5 b {
     transform: rotate(160deg);
-    top: 16%;
-    left: 38%;
+    top: 19%;
+    left: 30%;
 }
 
 .d1 .span4w5 b {
     transform: rotate(15deg);
-    top: 15%;
-    left: 18%;
+    top: 18%;
+    left: 25%;
 }
 
 .d1 .span5w5 b {
     transform: rotate(90deg);
-    top: 20%;
+    top: 30%;
     left: 38.5%;
 }
 /*Wheel 6 Text*/
 .d1 .span1w6 b {
     transform: rotate(-120deg);
     height: 50px;
-    top: 50%;
-    left: 54%;
+    top: 40%;
+    left: 47%;
     
 }
 
 .d1 .span2w6 b {
     transform: rotate(-60deg);
     height: 50px;
-    top: 46%;
-    left: -11%;
+    top: 35%;
+    left: -2%;
 
     
 }
@@ -852,85 +854,85 @@ span {
     transform: rotate(180deg);
     height: 50px;
     top: 44%;
-    left: 37%;
+    left: 27%;
 }
 
 .d1 .span4w6 b {
     transform: rotate(0deg);
     top: 39%;
-    left: 20%;
+    left: 28%;
 }
 
 .d1 .span5w6 b {
     transform: rotate(120deg);
-    top: 13%;
-    left: 57%;
+    top: 25%;
+    left: 51%;
 }
 
 .d1 .span6w6 b {
     transform: rotate(60deg);
-    top: 13%;
-    left: -1%;
+    top: 25%;
+    left: 0%;
 }
 
 /*Wheel 7 Text*/
 .d1 .span1w7 b {
     transform: rotate(-120deg);
     height: 50px;
-    top: 51%;
-    left: 56%;
+    top: 40%;
+    left: 48%;
     
 }
 
 .d1 .span2w7 b {
     transform: rotate(-65deg);
     height: 50px;
-    top: 46%;
-    left: -11%;
+    top: 36%;
+    left: -5%;
 }
 
 .d1 .span3w7 b {
     transform: rotate(190deg);
     height: 50px;
     top: 40%;
-    left: 38%;
+    left: 28%;
 }
 
 .d1 .span4w7 b {
     transform: rotate(-13deg);
-    top: 34%;
-    left: 20%;
+    top: 33%;
+    left: 25%;
 }
 
 .d1 .span5w7 b {
     transform: rotate(145deg);
-    top: 49%;
-    left: 46%;
+    top: 54%;
+    left: 36%;
     
 }
 
 .d1 .span6w7 b {
     transform: rotate(35deg);
-    top: 50%;
-    left: 8%;
+    top: 55%;
+    left: 22%;
 }
 
 .d1 .span7w7 b {
     transform: rotate(90deg);
-    top: 15%;
+    top: 28%;
     left: 38.5%;
 }
 /*Wheel 8 text*/
 .d1 .span1w8 b {
     transform: rotate(-112.5deg);
-    top: 38%;
-    left: 62%;
+    top: 32%;
+    left: 58%;
     
 }
 
 .d1 .span2w8 b {
     transform: rotate(-67.5deg);
-    top: 35%;
+    top: 32%;
     left: -5%;
     
 }
@@ -939,7 +941,7 @@ span {
     
     transform: rotate(202.5deg);
     top: 60%;
-    left: 35%;
+    left: 30%;
 }
 
 .d1 .span4w8 b {
@@ -950,8 +952,8 @@ span {
 
 .d1 .span5w8 b {
     transform: rotate(112.5deg);
-    top: 18%;
-    left: 61%;
+    top: 28%;
+    left: 57%;
 }
 
 .d1 .span6w8 b {
@@ -962,14 +964,14 @@ span {
 
 .d1 .span7w8 b {
     transform: rotate(67.5deg);
-    top: 18%;
-    left: -5%;
+    top: 28%;
+    left: 0%;
 }
 
 .d1 .span8w8 b {
   transform:rotate(157.5deg);
-  top: -7%;
-  left: 40%;
+  top: -3%;
+  left: 30%;
 }
 
 }
