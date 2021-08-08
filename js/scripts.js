@@ -1,3 +1,5 @@
+
+
 function changeInput(){
     let countArray = [];
     for (let i= 1; i<9; i++){
@@ -47,10 +49,17 @@ function generateWheel(array) {
     spinButton.id = "spin";
     spinButton.textContent = "Spin!";
     spinButton.setAttribute("data-target", "#foodModal");
-    spinButton.setAttribute("data-toggle", "modal");
+    spinButton.setAttribute("data-toggle", "modal"); //has to be commented otherwise showModal doesn't work properly. 
     arrow.id="wheelBackground";
-    //spin button create
-    //spinButton.setAttribute("onclick", "addSpin();");
+    
+    
+     //popup modal timer after button click
+     //have to comment setAttribute data-toggle on spin button or it doesnt work properly. 
+     //However, now the close button does not work properly on the modal.
+    // const showModal = function(){
+    //     $("#foodModal").modal("show");
+    // }
+    // spinButton.click(setTimeout(showModal, 6000));
 
     wheelContainer.appendChild(d1);
     wheelContainer.appendChild(spinButton);
