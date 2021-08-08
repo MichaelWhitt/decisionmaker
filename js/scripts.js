@@ -36,12 +36,20 @@ function generateWheel(array) {
     let d1 = document.createElement("div");
     let spinButton = document.createElement("button");
     let arrow = document.createElement("span");
+    let wChoice = document.getElementById("winningChoice");
+    let wName = document.getElementById("winningName");
+    let wImg = document.getElementById("winningImage");
+    let wRating = document.getElementById("winningRating");
+    let wAddress = document.getElementById("winningAddress");
+    let wPhone = document.getElementById("winningPhone");
     d1.id = "d1";
     d1.className = "d1";
     spinButton.id = "spin";
     spinButton.textContent = "Spin!";
+    spinButton.setAttribute("data-target", "#foodModal");
+    spinButton.setAttribute("data-toggle", "modal");
     arrow.id="wheelBackground";
-    // spin button create
+    //spin button create
     //spinButton.setAttribute("onclick", "addSpin();");
 
     wheelContainer.appendChild(d1);
@@ -70,9 +78,24 @@ function generateWheel(array) {
         let wheelDeg = addSpin(7110,7470);
         if (wheelDeg > 7109 && wheelDeg < 7291) {
             console.log("Winning Span: "+document.getElementById("spanb2").textContent);
-            
+            //display pop-up modal text - winning spanb
+            wChoice.textContent = "A Great " + document.getElementById("spanb2").textContent +" Spot Near You:"; 
+            wName.innerHTML = "<h4 id='winName'>" + "Kenoichi" + "</h4>";
+            //display winning restaurant pick
+            wImg.innerHTML = "<a href='https://michaeldwhitt.com' target=_blank><img id='winImage'src='https://s3-media0.fl.yelpcdn.com/bphoto/1YeJOzFzaACyMoCu5lygfA/o.jpg'/></a>"
+            wRating.innerHTML = "<h4 id='winRating'> 4.67 Stars </h4>";
+            wAddress.innerHTML = "<a target=_blank href='https://michaeldwhitt.com'><h4 id='winAddress'> 123 Real Street, Dallas, TX 75050 </h4></a>";
+            wPhone.innerHTML = "<h4 id='winPhone'> 123.456.7890 </h4>";
         } else {
             console.log("Winning Span: "+document.getElementById("spanb1").textContent);
+            //display pop-up modal text - winning spanb
+            wChoice.textContent = "A Great " + document.getElementById("spanb1").textContent +" Spot Near You:";
+            wName.innerHTML = "<h4 id='winName'>" + "Kenoichi" + "</h4>";
+            //display winning restaurant pick
+            wImg.innerHTML = "<a href='https://michaeldwhitt.com' target=_blank><img id='winImage'src='https://s3-media0.fl.yelpcdn.com/bphoto/1YeJOzFzaACyMoCu5lygfA/o.jpg'/></a>"
+            wRating.innerHTML = "<h4 id='winRating'> 4.67 Stars </h4>";
+            wAddress.innerHTML = "<a target=_blank href='https://michaeldwhitt.com'><h4 id='winAddress'> 123 Real Street, Dallas, TX 75050 </h4></a>";
+            wPhone.innerHTML = "<h4 id='winPhone'> 123.456.7890 </h4>";     
         }
     });
   } else if (wheelSpanCount === 3){

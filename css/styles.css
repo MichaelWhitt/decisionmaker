@@ -86,6 +86,46 @@ color: #3ded9a;
 }
 /*End Modal*/
 
+/*Food Modal*/
+#foodModal {
+    position: absolute;
+    top: 100%;
+    left: -20%;
+}
+#foodModal h4 {
+    color:black;
+}
+#winImage {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 15px #aaa;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+#winName {
+    font-weight: 700;
+    
+}
+
+#winRating {
+    font-weight: 700;
+}
+
+#winRating {
+    font-weight: 700;
+}
+
+#winAddress {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#winPhone {
+    font-weight: 600;
+    font-size: 1rem;
+}
+/*End Food Modal*/
 
 form .container ul {
    padding: 0; 

@@ -43,7 +43,7 @@
                 <ul class="nav navbar-nav">
                     <li style="color:white;">Helping you decide what to { eat }</li>
                     <li class="nav-item active"><a href="index.html">Home</a></li>
-                    <li class="nav-item" ><a id="accountButton">Account <i class="fa fa-sign-in"></i></a></li>
+                    <li class="nav-item" ><a id="accountButton" data-toggle="modal" data-target="#accountModal">Account <i class="fa fa-sign-in"></i></a></li>
                     <li class="nav-item">
                         <!-- trigger modal -->
                         <a id="leaderButton" data-toggle="modal" data-target="#leaderModal">
@@ -163,14 +163,49 @@
         </div>
     </div>
     <!--End Account Modal-->
+
     <div class="container text-center" id="homebutton">
         <a href="#section2"> <button class="btn btn-lg btn-primary">Help Me Decide!</button>  </a>
     </div>
     
         
     </section> 
-
     <section id="section2" class="sm-pt-0">
+        <!--Start Food Modal-->
+        <div class="modal fade" id="foodModal" tabindex="-1" role="dialog" aria-labelledby="#modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="foodModalTitle">Catered Just For You</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <div class="card">
+                    <div class="card-header text-center ">
+                        <div id="winningChoice"></div>
+                        <div id="winningName"></div>
+                    </div>
+                    <div class="card-body text-center">
+                        <!--Popuate winning modal with information-->
+                        
+                        
+                        
+                        <div id="winningImage"></div>
+                        <div id="winningRating"></div>
+                        <div id="winningAddress"></div>
+                        <div id="winningPhone"></div>
+                    </div>
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!--End Food Modal-->
     <div class="container" id="inputwheel">
         <div class="row">
             <!--Input Form-->
@@ -234,7 +269,7 @@
                     <span class="span7w8"><b id="spanb7">Korean</b></span>
                     <span class="span8w8"><b id="spanb8">Cajun</b></span>
                 </div>
-                <button id="spin"  onclick="addSpin(7155, 7515);">Spin </button>
+                <button id="spin"  onclick="addSpin(7155, 7515);" data-target="#foodModal" data-toggle="modal">Spin </button>
                 <span id="wheelBackground"></span>
             </div>
         </div>
