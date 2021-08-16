@@ -65,7 +65,7 @@ function generateWheel(array) {
     wheelContainer.appendChild(spinButton);
     wheelContainer.appendChild(arrow);
 
-    // add reset wheel if spin is clicked again
+    // add reset wheel if spin is clicked again TO DO
     
     for (let i = 0; i <= array.length -1; i++) {
       let span = document.createElement("span");
@@ -79,6 +79,18 @@ function generateWheel(array) {
       // css change if less than 8, 26px
       d1.appendChild(span);
   }
+
+  //function to generate data on foodModal *Winning spin data*
+  const displayWinner = function(winningInfo){
+    wChoice.textContent = "A Great " + winningInfo +" Spot Near You:"; 
+    wName.innerHTML = "<h4 id='winName'>" + "Kenoichi" + "</h4>";
+    //display winning restaurant pick
+    wImg.innerHTML = "<a href='https://michaeldwhitt.com' target=_blank><img id='winImage'src='https://s3-media0.fl.yelpcdn.com/bphoto/1YeJOzFzaACyMoCu5lygfA/o.jpg'/></a>"
+    wRating.innerHTML = "<h4 id='winRating'> 4.67 Stars </h4>";
+    wAddress.innerHTML = "<a target=_blank href='https://michaeldwhitt.com'><h4 id='winAddress'> 123 Real Street, Dallas, TX 75050 </h4></a>";
+    wPhone.innerHTML = "<h4 id='winPhone'> 123.456.7890 </h4>";
+  }
+
   // if statement generate wheel spin with trackable degrees
   let wheelSpanCount = array.length;
   if (wheelSpanCount === 2){
@@ -86,25 +98,15 @@ function generateWheel(array) {
       $("#spin").click(function(){
         let wheelDeg = addSpin(7110,7470);
         if (wheelDeg > 7109 && wheelDeg < 7291) {
-            console.log("Winning Span: "+document.getElementById("spanb2").textContent);
-            //display pop-up modal text - winning spanb
-            wChoice.textContent = "A Great " + document.getElementById("spanb2").textContent +" Spot Near You:"; 
-            wName.innerHTML = "<h4 id='winName'>" + "Kenoichi" + "</h4>";
-            //display winning restaurant pick
-            wImg.innerHTML = "<a href='https://michaeldwhitt.com' target=_blank><img id='winImage'src='https://s3-media0.fl.yelpcdn.com/bphoto/1YeJOzFzaACyMoCu5lygfA/o.jpg'/></a>"
-            wRating.innerHTML = "<h4 id='winRating'> 4.67 Stars </h4>";
-            wAddress.innerHTML = "<a target=_blank href='https://michaeldwhitt.com'><h4 id='winAddress'> 123 Real Street, Dallas, TX 75050 </h4></a>";
-            wPhone.innerHTML = "<h4 id='winPhone'> 123.456.7890 </h4>";
+            let winningInfo = document.getElementById("spanb2").textContent;
+            console.log(winningInfo);
+            displayWinner(winningInfo);
+            
         } else {
-            console.log("Winning Span: "+document.getElementById("spanb1").textContent);
-            //display pop-up modal text - winning spanb
-            wChoice.textContent = "A Great " + document.getElementById("spanb1").textContent +" Spot Near You:";
-            wName.innerHTML = "<h4 id='winName'>" + "Kenoichi" + "</h4>";
-            //display winning restaurant pick
-            wImg.innerHTML = "<a href='https://michaeldwhitt.com' target=_blank><img id='winImage'src='https://s3-media0.fl.yelpcdn.com/bphoto/1YeJOzFzaACyMoCu5lygfA/o.jpg'/></a>"
-            wRating.innerHTML = "<h4 id='winRating'> 4.67 Stars </h4>";
-            wAddress.innerHTML = "<a target=_blank href='https://michaeldwhitt.com'><h4 id='winAddress'> 123 Real Street, Dallas, TX 75050 </h4></a>";
-            wPhone.innerHTML = "<h4 id='winPhone'> 123.456.7890 </h4>";     
+            let winningInfo = document.getElementById("spanb1").textContent;
+            console.log(winningInfo);
+            displayWinner(winningInfo);
+            
         }
     });
   } else if (wheelSpanCount === 3){
@@ -113,11 +115,14 @@ function generateWheel(array) {
         let wheelDeg = addSpin(7170,7528);
         console.log(wheelDeg);
         if (wheelDeg > 7412 && wheelDeg < 7528) {
-            console.log("Winning Span: "+document.getElementById("spanb3").textContent);
+            let winningInfo = document.getElementById("spanb3").textContent;
+            displayWinner(winningInfo);
         } else if (wheelDeg > 7170 && wheelDeg < 7290){
-            console.log("Winning Span: "+document.getElementById("spanb2").textContent);
+            let winningInfo = document.getElementById("spanb2").textContent;
+            displayWinner(winningInfo);
         } else {
-            console.log("Winning Span: "+document.getElementById("spanb1").textContent);
+            let winningInfo = document.getElementById("spanb1").textContent;
+            displayWinner(winningInfo);
         }
     });
 
@@ -127,27 +132,35 @@ function generateWheel(array) {
         let wheelDeg = addSpin(7201,7559);
         console.log(wheelDeg);
         if (wheelDeg > 7470 && wheelDeg < 7559) {
-            console.log("Winning Span: "+document.getElementById("spanb4").textContent);
+            let winningInfo = document.getElementById("spanb4").textContent;
+            displayWinner(winningInfo);
         } else if (wheelDeg > 7381 && wheelDeg < 7469){
-            console.log("Winning Span: "+document.getElementById("spanb3").textContent);
+            let winningInfo = document.getElementById("spanb3").textContent;
+            displayWinner(winningInfo);
         } else if (wheelDeg > 7201 && wheelDeg < 7290){
-                console.log("Winning Span: "+document.getElementById("spanb2").textContent);
+                let winningInfo = document.getElementById("spanb2").textContent;
+                displayWinner(winningInfo);
         } else {
-            console.log("Winning Span: "+document.getElementById("spanb1").textContent);
+            let winningInfo = document.getElementById("spanb1").textContent;
+            displayWinner(winningInfo);
         }
     });
   }
   else if (wheelSpanCount === 5){
       spinButton.setAttribute("onclick", "addSpin(7150, 7509);");
+      displayWinner();
   }
   else if (wheelSpanCount === 6){
       spinButton.setAttribute("onclick", "addSpin(7170, 7529);");
+      displayWinner();
   }
   else if (wheelSpanCount === 7){
       spinButton.setAttribute("onclick", "addSpin(7189, 7548);");
+      displayWinner();
   }
   else if (wheelSpanCount === 8){
       spinButton.setAttribute("onclick", "addSpin(7155, 7515);");
+      displayWinner();
   }
 
 }
