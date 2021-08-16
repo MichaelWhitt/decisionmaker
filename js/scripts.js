@@ -1,3 +1,10 @@
+/*Current issues:
+1. Update Wheel button triggers empty modal 6s after click (likely bc modal code for #foodModal in wrong place)
+2. Hitting back while modal is active will take users to #section1 and keep modal active
+3. Modal close buttons don't work (likely bc of having 3 on the same page- not supported)
+4. Want to change text input to drop-down for API usage (and text inputs with 2 words w/ space cause CSS issues)
+*/
+
 // default 8 wheel values
 const defaultSpinFunction = function(){
     const defaultSpinBtn = document.getElementById("spin");
