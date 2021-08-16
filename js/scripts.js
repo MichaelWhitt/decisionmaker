@@ -1,3 +1,29 @@
+// default 8 wheel values
+const defaultSpinFunction = function(){
+    const defaultSpinBtn = document.getElementById("spin");
+    let wheelDeg = addSpin(7210,7210);
+    let wChoice = document.getElementById("winningChoice");
+    let wName = document.getElementById("winningName");
+    let wImg = document.getElementById("winningImage");
+    let wRating = document.getElementById("winningRating");
+    let wAddress = document.getElementById("winningAddress");
+    let wPhone = document.getElementById("winningPhone");
+
+    const defaultFoodModal = function(){
+        $("#foodModal").modal("show");
+    }
+
+    defaultSpinBtn.click(setTimeout(defaultFoodModal, 6000));
+    
+    wChoice.textContent = "A Great Japanese Spot Near You:"; 
+    wName.innerHTML = "<h4 id='winName'>" + "Kunoichi" + "</h4>";
+    //display winning restaurant pick
+    wImg.innerHTML = "<a href='https://michaeldwhitt.com' target=_blank><img id='winImage'src='https://s3-media0.fl.yelpcdn.com/bphoto/1YeJOzFzaACyMoCu5lygfA/o.jpg'/></a>"
+    wRating.innerHTML = "<h4 id='winRating'> 4.67 Stars </h4>";
+    wAddress.innerHTML = "<a target=_blank href='https://michaeldwhitt.com'><h4 id='winAddress'> 123 Real Street, Dallas, TX 75050 </h4></a>";
+    wPhone.innerHTML = "<h4 id='winPhone'> 123.456.7890 </h4>";
+
+}
 
 
 function changeInput(){
@@ -83,7 +109,7 @@ function generateWheel(array) {
   //function to generate data on foodModal *Winning spin data*
   const displayWinner = function(winningInfo){
     wChoice.textContent = "A Great " + winningInfo +" Spot Near You:"; 
-    wName.innerHTML = "<h4 id='winName'>" + "Kenoichi" + "</h4>";
+    wName.innerHTML = "<h4 id='winName'>" + "Kunoichi" + "</h4>";
     //display winning restaurant pick
     wImg.innerHTML = "<a href='https://michaeldwhitt.com' target=_blank><img id='winImage'src='https://s3-media0.fl.yelpcdn.com/bphoto/1YeJOzFzaACyMoCu5lygfA/o.jpg'/></a>"
     wRating.innerHTML = "<h4 id='winRating'> 4.67 Stars </h4>";
@@ -114,10 +140,10 @@ function generateWheel(array) {
     $("#spin").click(function(){
         let wheelDeg = addSpin(7170,7528);
         console.log(wheelDeg);
-        if (wheelDeg > 7412 && wheelDeg < 7528) {
+        if (wheelDeg >= 7412 && wheelDeg <= 7528) {
             let winningInfo = document.getElementById("spanb3").textContent;
             displayWinner(winningInfo);
-        } else if (wheelDeg > 7170 && wheelDeg < 7290){
+        } else if (wheelDeg >= 7170 && wheelDeg <= 7290){
             let winningInfo = document.getElementById("spanb2").textContent;
             displayWinner(winningInfo);
         } else {
@@ -131,15 +157,15 @@ function generateWheel(array) {
       $("#spin").click(function(){
         let wheelDeg = addSpin(7201,7559);
         console.log(wheelDeg);
-        if (wheelDeg > 7470 && wheelDeg < 7559) {
+        if (wheelDeg >= 7470 && wheelDeg <= 7559) {
             let winningInfo = document.getElementById("spanb4").textContent;
             displayWinner(winningInfo);
-        } else if (wheelDeg > 7381 && wheelDeg < 7469){
+        } else if (wheelDeg >= 7381 && wheelDeg <= 7469){
             let winningInfo = document.getElementById("spanb3").textContent;
             displayWinner(winningInfo);
-        } else if (wheelDeg > 7201 && wheelDeg < 7290){
-                let winningInfo = document.getElementById("spanb2").textContent;
-                displayWinner(winningInfo);
+        } else if (wheelDeg >= 7201 && wheelDeg <= 7290){
+            let winningInfo = document.getElementById("spanb2").textContent;
+            displayWinner(winningInfo);
         } else {
             let winningInfo = document.getElementById("spanb1").textContent;
             displayWinner(winningInfo);
@@ -147,20 +173,114 @@ function generateWheel(array) {
     });
   }
   else if (wheelSpanCount === 5){
-      spinButton.setAttribute("onclick", "addSpin(7150, 7509);");
-      displayWinner();
+      //spinButton.setAttribute("onclick", "addSpin(7150, 7509);");
+      $("#spin").click(function(){
+        let wheelDeg = addSpin(7150,7509);
+        console.log(wheelDeg);
+        if (wheelDeg >= 7150 && wheelDeg <= 7216) {
+            let winningInfo = document.getElementById("spanb4").textContent;
+            displayWinner(winningInfo);
+        } else if (wheelDeg >= 7364 && wheelDeg <= 7430){
+            let winningInfo = document.getElementById("spanb3").textContent;
+            displayWinner(winningInfo);
+        } else if (wheelDeg >= 7217 && wheelDeg <= 7290){
+                let winningInfo = document.getElementById("spanb2").textContent;
+                displayWinner(winningInfo);
+        } else if (wheelDeg >= 7291 && wheelDeg <= 7363){
+            let winningInfo = document.getElementById("spanb1").textContent;
+            displayWinner(winningInfo);
+        } else {
+            let winningInfo = document.getElementById("spanb5").textContent;
+            displayWinner(winningInfo);
+        }
+    });
   }
   else if (wheelSpanCount === 6){
-      spinButton.setAttribute("onclick", "addSpin(7170, 7529);");
-      displayWinner();
+      //spinButton.setAttribute("onclick", "addSpin(7170, 7529);");
+      $("#spin").click(function(){
+        let wheelDeg = addSpin(7520,7520);
+        console.log(wheelDeg);
+        if (wheelDeg >= 7170 && wheelDeg <= 7231) {
+            let winningInfo = document.getElementById("spanb4").textContent;
+            displayWinner(winningInfo);
+        } else if (wheelDeg >= 7350 && wheelDeg <= 7410){
+            let winningInfo = document.getElementById("spanb3").textContent;
+            displayWinner(winningInfo);
+        } else if (wheelDeg >= 7232 && wheelDeg <= 7290){
+                let winningInfo = document.getElementById("spanb2").textContent;
+                displayWinner(winningInfo);
+        } else if (wheelDeg >= 7291 && wheelDeg <= 7349){
+            let winningInfo = document.getElementById("spanb1").textContent;
+            displayWinner(winningInfo);
+        } else if(wheelDeg >= 7411 && wheelDeg <= 7470){
+            let winningInfo = document.getElementById("spanb5").textContent;
+            displayWinner(winningInfo);
+        } else {
+            let winningInfo = document.getElementById("spanb6").textContent;
+            displayWinner(winningInfo);
+        }
+    });
   }
   else if (wheelSpanCount === 7){
-      spinButton.setAttribute("onclick", "addSpin(7189, 7548);");
-      displayWinner();
+      //spinButton.setAttribute("onclick", "addSpin(7189, 7548);");
+      $("#spin").click(function(){
+        let wheelDeg = addSpin(7544,7544);
+        console.log(wheelDeg);
+        if (wheelDeg >= 7189 && wheelDeg <= 7235) {
+            let winningInfo = document.getElementById("spanb4").textContent;
+            displayWinner(winningInfo);
+        } else if (wheelDeg >= 7345 && wheelDeg <= 7391){
+            let winningInfo = document.getElementById("spanb3").textContent;
+            displayWinner(winningInfo);
+        } else if (wheelDeg >= 7236 && wheelDeg <= 7290){
+                let winningInfo = document.getElementById("spanb2").textContent;
+                displayWinner(winningInfo);
+        } else if (wheelDeg >= 7291 && wheelDeg <= 7344){
+            let winningInfo = document.getElementById("spanb1").textContent;
+            displayWinner(winningInfo);
+        } else if(wheelDeg >= 7392 && wheelDeg <= 7439){
+            let winningInfo = document.getElementById("spanb5").textContent;
+            displayWinner(winningInfo);
+        } else if(wheelDeg >= 7500 && wheelDeg <= 7548) {
+            let winningInfo = document.getElementById("spanb6").textContent;
+            displayWinner(winningInfo); 
+        } else {
+            let winningInfo = document.getElementById("spanb7").textContent;
+            displayWinner(winningInfo); 
+        }
+    });
   }
   else if (wheelSpanCount === 8){
-      spinButton.setAttribute("onclick", "addSpin(7155, 7515);");
-      displayWinner();
+      //spinButton.setAttribute("onclick", "addSpin(7155, 7515);");
+      $("#spin").click(function(){
+        let wheelDeg = addSpin(7390,7390);
+        console.log(wheelDeg);
+        if (wheelDeg >= 7200 && wheelDeg <= 7245) {
+            let winningInfo = document.getElementById("spanb4").textContent;
+            displayWinner(winningInfo);
+        } else if (wheelDeg >= 7336 && wheelDeg <= 7380){
+            let winningInfo = document.getElementById("spanb3").textContent;
+            displayWinner(winningInfo);
+        } else if (wheelDeg >= 7246 && wheelDeg <= 7290){
+                let winningInfo = document.getElementById("spanb2").textContent;
+                displayWinner(winningInfo);
+        } else if (wheelDeg >= 7291 && wheelDeg <= 7335){
+            let winningInfo = document.getElementById("spanb1").textContent;
+            displayWinner(winningInfo);
+        } else if(wheelDeg >= 7426 && wheelDeg <= 7470){
+            let winningInfo = document.getElementById("spanb5").textContent;
+            displayWinner(winningInfo);
+        } else if(wheelDeg >= 7155 && wheelDeg <= 7199) {
+            let winningInfo = document.getElementById("spanb6").textContent;
+            displayWinner(winningInfo); 
+        } else if(wheelDeg >= 7471 && wheelDeg <= 7515) {
+            let winningInfo = document.getElementById("spanb7").textContent;
+            displayWinner(winningInfo); 
+        } else {
+            let winningInfo = document.getElementById("spanb8").textContent;
+            displayWinner(winningInfo); 
+        }
+    });
   }
 
 }

@@ -56,6 +56,10 @@ h4, th, td {
 }
 
 /*Modals*/
+
+#foodModal > div > div > div.modal-header{
+    margin: 0 auto;
+}
 #leaderButton, #accountButton {
 color: #3ded9a;
 }
