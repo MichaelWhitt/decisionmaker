@@ -3,6 +3,7 @@
 2. Hitting back while modal is active will take users to #section1 and keep modal active
 3. Modal close buttons don't work (likely bc of having 3 on the same page- not supported)
 4. Want to change text input to drop-down for API usage (and text inputs with 2 words w/ space cause CSS issues)
+5. Ideally want to use SCSS for DRY practices on wheel CSS
 */
 
 // default 8 wheel values
